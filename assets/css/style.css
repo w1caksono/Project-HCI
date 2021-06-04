@@ -15,6 +15,10 @@
     align-items: center;
 }
 
+.nav-item{
+    text-align: center;
+}
+
 .navbar .navbar-nav .nav-link,
 .dropdown .dropdown-menu .dropdown-item {
     color: white;
