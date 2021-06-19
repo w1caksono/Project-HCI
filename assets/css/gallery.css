@@ -57,7 +57,7 @@
 
 .content{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
 }
 
 .content-card{
