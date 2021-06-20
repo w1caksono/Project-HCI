@@ -6,6 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenshin Impact</title>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("gallery");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = 1
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex-1].style.display = "flex";
+            slides[slideIndex-1].style.justifyContent = "center";
+
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
     <link rel="stylesheet" href="assets/css/gallery.css">
 </head>
 
@@ -28,45 +68,49 @@
         </div>
     </div>
 
-    <div class="content">
-        <div class="content-card">
-            <img src="assets/css/img/skyrim_gameplay_ft.jpg" alt="">
-            <h3>Dragon Priest</h3>
+    <div class="gallerywrap">
+        <h2>Screenshot Gallery</h2>
+        <div class = "gallery">
+            <div class = "imgnum">1 / 3</div>
+            <img src= "./assets/css/img/ricardo-milos.jpg" alt="">
         </div>
-        <div class="content-card">
-            <img src="assets/css/img/skyrim_gameplay_ft.jpg" alt="">
-            <h3>Dragon Priest</h3>
+        
+        <div class = "gallery">
+            <div class = "imgnum">2 / 3</div>
+            <img src= "./assets/css/img/sseth.jpg" alt="">
         </div>
-        <div class="content-card">
-            <img src="assets/css/img/skyrim_gameplay_ft.jpg" alt="">
-            <h3>Dragon Priest</h3>
+        
+        <div class = "gallery">
+            <div class = "imgnum">3 / 3</div>
+            <img src= "./assets/css/img/skyrim_gameplay_ft.jpg" alt="">
         </div>
-        <div class="content-card">
-            <img src="assets/css/img/skyrim_gameplay_ft.jpg" alt="">
-            <h3>Dragon Priest</h3>
+        
+        <a class = "prev" onclick= "plusSlides(-1)">&#10094;</a>
+        <a class = "next" onclick= "plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
         </div>
-        <div class="content-card">
-            <img src="assets/css/img/skyrim_gameplay_ft.jpg" alt="">
-            <h3>Dragon Priest</h3>
+
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="./assets/css/img/ricardo-milos.jpg" height="300px" width="350px" onclick="currentSlide(1)" alt="Ricardo Milos">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./assets/css/img/sseth.jpg" height="300px" width="350px" onclick="currentSlide(2)" alt="Ssethtzeentach">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./assets/css/img/skyrim_gameplay_ft.jpg" height="300px" width="350px" onclick="currentSlide(3)" alt="Dragon Priest">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./assets/css/img/ricardo-milos.jpg" height="300px" width="350px" onclick="currentSlide(1)" alt="Ricardo Milos">
         </div>
-        <div class="content-card">
-            <img src="assets/css/img/skyrim_gameplay_ft.jpg" alt="">
-            <h3>Dragon Priest</h3>
-        </div>
-        <div class="content-card">
-            <img src="assets/css/img/skyrim_gameplay_ft.jpg" alt="">
-            <h3>Dragon Priest</h3>
-        </div>
-        <div class="content-card">
-            <img src="assets/css/img/skyrim_gameplay_ft.jpg" alt="">
-            <h3>Dragon Priest</h3>
-        </div>
-        <div class="content-card">
-            <img src="assets/css/img/skyrim_gameplay_ft.jpg" alt="">
-            <h3>Dragon Priest</h3>
+
+        <div class="caption-container">
+            <p id="caption"></p>
         </div>
     </div>
-
+    
     <div class="footer">
         <div class="lower-footer">
             <span class="socmed-footer">

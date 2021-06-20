@@ -23,6 +23,8 @@
 .dropdown .dropdown-menu .dropdown-item {
     color: white;
     text-decoration: none;
+    font-family: "Calibri Light", sans-serif;
+    font-weight: bolder;
     font-size: 20px;
     display: block;
     padding: 15px;
@@ -59,15 +61,24 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    background: url("./img/AeraRuins.png") ; 
+    background-size: cover;
+}
+
+.textbox{
+    margin: 30px;
+    background-color: #ffffff;
+    opacity: 0.6;
 }
 
 .textbox{
     width: 500px;
     padding: 60px;
+    font-family: "Calibri Light", sans-serif;
 }
 
 .textbox > h1{
-    text-align: center;
+    text-align: left;
 }
 
 .platform-available{
@@ -82,25 +93,30 @@
     background-color: black;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    
 }
 
 .socmed-logo{
-    height: 50px;
-    width: 50px;
+    height: 37px;
+    width: 42px;
 }
 
 .copyright{
-    font-size: 25px;
+    font-family: "Calibri Light", sans-serif;
+    font-size: 17px;
     color: white;
     display: flex;
+    padding-right: 17px;
 }
 
 .socmed-footer{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
     width: 400px;
+    margin: 7px;
 }
 
 @media only screen and (max-width: 600px) {

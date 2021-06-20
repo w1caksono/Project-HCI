@@ -23,6 +23,8 @@
 .dropdown .dropdown-menu .dropdown-item {
     color: white;
     text-decoration: none;
+    font-family: "Calibri Light", sans-serif;
+    font-weight: bolder;
     font-size: 20px;
     display: block;
     padding: 15px;
@@ -55,22 +57,79 @@
     display: none;
 }
 
-.content{
-    display: grid;
-    grid-template-columns: auto auto;
-}
 
-.content-card{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin: 30px;
-    width: 100/3%;
-}
+/* --------------  */
+/* GALLERY EDITOR */
+/* -------------- */
 
-.content-card > h3{
+.gallerywrap > h2{
+    color: white;
+    background-color: #222;
+    font-weight: bold;
+    padding: 16px;
+    font-size: 37px;
+    font-family: "Calibri Light", sans-serif;
     text-align: center;
-    font-size: 27px;
+}
+
+.gallerywrap{
+    
+    background-size: cover;
+}
+
+.gallery{
+    display: none;
+    background-color: #222;
+}
+
+.next, .prev{
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    bottom: 50%;
+    padding: 16px;
+    font-size: 40px;
+    z-index: 2147483647;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+    font-family: "Calibri Light", sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.imgnum {
+    display: none;
+}
+
+.next{
+    right: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: black;
+}
+
+.demo {
+    opacity: 0.6;
+}
+  
+.active,
+.demo:hover {
+    opacity: 1;
 }
 
 .platform-available{
@@ -85,25 +144,30 @@
     background-color: black;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    
 }
 
 .socmed-logo{
-    height: 50px;
-    width: 50px;
+    height: 37px;
+    width: 42px;
 }
 
 .copyright{
-    font-size: 25px;
+    font-family: "Calibri Light", sans-serif;
+    font-size: 17px;
     color: white;
     display: flex;
+    padding-right: 17px;
 }
 
 .socmed-footer{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
     width: 400px;
+    margin: 7px;
 }
 
 @media only screen and (max-width: 600px) {
