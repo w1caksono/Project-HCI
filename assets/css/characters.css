@@ -71,27 +71,46 @@
     margin: 0px 12px 0px 0px;
 }
 
-.char-container{
+.characterwrap{
+    background: url("./img/__tsukino_mito_nijisanji_drawn_by_fuu_fuu__0504913d07426f763e20d6dceb0318b9.jpg") no-repeat;
+    background-size: cover;
     display: flex;
     padding-top: 100px;
     padding-bottom: 100px;
     height: 620px;
+    position: relative;
     justify-content: center;
 }
 
-#container-sseth{
-    background: url(https://images.unsplash.com/photo-1516528387618-afa90b13e000?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80) no-repeat;
+.next, .prev{
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    top: 50%;
+    padding: 16px;
+    font-size: 40px;
+    z-index: 2147483647;
 }
 
-#container-ricardo{
-    background: url(https://wallpapercave.com/wp/wp2638048.jpg) no-repeat;
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.next{
+    right: 0%;
+}
+
+.prev{
+    left: 0%;
 }
 
 .char-card{
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-family: "Calibri Light", sans-serif;
     width: 870px;
     height: 500px;
     padding: 50px;

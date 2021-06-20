@@ -7,6 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenshin Impact</title>
     <link rel="stylesheet" href="assets/css/characters.css">
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("char-card");
+            var dots = document.getElementsByClassName("char-card");
+            var captionText = document.getElementById("char-desc");
+            
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex-1].style.display = "flex";
+            slides[slideIndex-1].style.flexDirection = "row";
+            slides[slideIndex-1].style.justifyContent = "space-between";
+            slides[slideIndex-1].style.alignItems = "center";
+
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
 </head>
 
 <body>
@@ -33,35 +74,34 @@
           </div>
     </div>
 
-    <div class="content-characters">
+    <div class="characterwrap">
+        
+        <a class = "prev" onclick= "plusSlides(-1)">&#10094;</a>
+        <a class = "next" onclick= "plusSlides(1)">&#10095;</a>
 
-        <div class="char-container" id="container-sseth">
-           <div class="char-card">
+        <div class="char-card" id="container-sseth">
             <div class="char-picture">
                 <img src="assets/css/img/sseth.jpg" alt="">
             </div>
             <div class="char-desc">
                 <p>
-                    <strong>Ssethtzeentach</strong><br>
+                    <strong style="font-size: 20px;">Ssethtzeentach</strong><br><br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio doloribus nobis totam, eos veritatis assumenda ea delectus dignissimos corrupti possimus numquam odit commodi repellat incidunt, exercitationem fugit quos! Nemo, molestias?
                 </p>
             </div>
-           </div>
         </div>
 
-        <div class="char-container" id="container-ricardo">
-            <div class="char-card">
-             <div class="char-picture">
-                 <img src="assets/css/img/ricardo-milos.jpg" alt="">
-             </div>
-             <div class="char-desc">
-                 <p>
-                     <strong>Ricardo Milos</strong><br>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio doloribus nobis totam, eos veritatis assumenda ea delectus dignissimos corrupti possimus numquam odit commodi repellat incidunt, exercitationem fugit quos! Nemo, molestias?
-                 </p>
-             </div>
+        <div class="char-card" id = "container-ricardo">
+            <div class="char-picture">
+                <img src="assets/css/img/ricardo-milos.jpg" alt="">
             </div>
-         </div>
+            <div class="char-desc">
+                <p>
+                    <strong style="font-size: 20px;">Ricardo Milos</strong><br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio doloribus nobis totam, eos veritatis assumenda ea delectus dignissimos corrupti possimus numquam odit commodi repellat incidunt, exercitationem fugit quos! Nemo, molestias?
+                </p>
+            </div>
+        </div>
 
     </div>
 
