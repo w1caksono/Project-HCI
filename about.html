@@ -11,21 +11,26 @@
 
 <body>
     <div class="navbar">
-        <div class="navbar-toggle" onclick="toogleNavbar()">
-            <svg viewBox="0 0 100 80" width="40" height="40" fill="white">
-                <rect width="100" height="10"></rect>
-                <rect y="30" width="100" height="10"></rect>
-                <rect y="60" width="100" height="10"></rect>
-            </svg>              
-        </div>
-         <div class="navbar-nav" id="navbar-nav">
-            <div class="nav-logo"><img src="assets/css/img/logo_righteous.png" alt="logo"></div>
-            <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
-            <div class="nav-item"><a href="characters.html" class="nav-link">Characters</a></div>
-            <div class="nav-item"><a href="#" class="nav-link">About</a></div>
-            <div class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></div>
-            <div class="nav-item"><a href="register.html" class="nav-link">Register</a></div>
-        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><img src="assets/css/img/logo_righteous.png" alt=""></button>
+            <div class="dropdown-content">
+              <a href="#">
+                  <div class="dropdown-link"><img src="assets/css/img/home-button.png" alt="">Home</div>
+                </a>
+                <a href="#">
+                    <div class="dropdown-link"><img src="assets/css/img/character-button.png" alt="">Characters</div>
+                  </a>
+              <a href="#">
+                    <div class="dropdown-link"><img src="assets/css/img/dev-note-button.png" alt="">About</div>
+              </a>
+              <a href="#">
+                <div class="dropdown-link"><img src="assets/css/img/folder-button.png" alt="">Gallery</div>
+              </a>
+              <a href="#">
+                <div class="dropdown-link"><img src="assets/css/img/quill-button.png" alt="">Register</div>
+              </a>
+            </div>
+          </div>
     </div>
 
     <div class="content">
