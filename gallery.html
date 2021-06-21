@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f0f0f2d20.js"></script>
     <title>Kenshin Impact</title>
-    <script>
+    <script src = "./js/gallery.js"></script>
+    <!-- <script>
         var slideIndex = 1;
         showSlides(slideIndex);
 
@@ -40,12 +43,11 @@
             }
 
             slides[slideIndex-1].style.display = "flex";
-            slides[slideIndex-1].style.justifyContent = "center";
 
             dots[slideIndex-1].className += " active";
             captionText.innerHTML = dots[slideIndex-1].alt;
         }
-    </script>
+    </script> -->
     <link rel="stylesheet" href="assets/css/gallery.css">
 </head>
 
@@ -95,8 +97,8 @@
             <img src= "./assets/css/img/133946.jpg" alt="">
         </div>
 
-        <a class = "prev" onclick= "plusSlides(-1)">&#10094;</a>
-        <a class = "next" onclick= "plusSlides(1)">&#10095;</a>
+        <a class = "prev" id = "slide-left">&#10094;</a>
+        <a class = "next" id = "slide-right">&#10095;</a>
 
         <div class="caption-container">
             <p id="caption"></p>

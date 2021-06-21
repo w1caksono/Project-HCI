@@ -106,7 +106,7 @@
 }
 
 .char-card{
-    display: none;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

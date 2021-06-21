@@ -80,18 +80,50 @@
 }
 
 .content{
-    display: flex;
     background: url("./img/Arkareact.png") no-repeat center;
     height: 100vh;
     width: 100%;
     background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
     justify-content: center;
-    align-items: flex-end;
+}
+
+.imageclass{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.next, .prev{
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    bottom: 50%;
+    padding: 16px;
+    font-size: 40px;
+    z-index: 2147483647;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.next{
+    right: 0%;
+}
+
+.prev{
+    left: 0%;
 }
 
 .platform-available{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     border-color: transparent;
     padding: 20px;
