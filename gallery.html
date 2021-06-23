@@ -5,72 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5f0f0f2d20.js"></script>
     <title>Kenshin Impact</title>
     <script src = "./js/gallery.js"></script>
-    <!-- <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("gallery");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = 1
-            }
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-
-            slides[slideIndex-1].style.display = "flex";
-
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
-        }
-    </script> -->
+    
     <link rel="stylesheet" href="assets/css/gallery.css">
 </head>
 
 <body>
     <div class="navbar">
         <div class="dropdown">
-            <button class="dropbtn"><img src="assets/css/img/logo_righteous.png" alt=""></button>
+            <button class="dropbtn"><img src="assets/css/img/logo.png" alt=""></button>
             <div class="dropdown-content">
-              <a href="#">
+                <a href="Home.html">
                   <div class="dropdown-link"><img src="assets/css/img/home-button.png" alt="">Home</div>
                 </a>
-                <a href="#">
+                <a href="Characters.html">
                     <div class="dropdown-link"><img src="assets/css/img/character-button.png" alt="">Characters</div>
-                  </a>
-              <a href="#">
+                </a>
+                <a href="About.html">
                     <div class="dropdown-link"><img src="assets/css/img/dev-note-button.png" alt="">About</div>
-              </a>
-              <a href="#">
-                <div class="dropdown-link"><img src="assets/css/img/folder-button.png" alt="">Gallery</div>
-              </a>
-              <a href="#">
-                <div class="dropdown-link"><img src="assets/css/img/quill-button.png" alt="">Register</div>
-              </a>
+                </a>
+                <a href="Gallery.html">
+                    <div class="dropdown-link"><img src="assets/css/img/folder-button.png" alt="">Gallery</div>
+                </a>
+                <a href="Register.html">
+                    <div class="dropdown-link"><img src="assets/css/img/quill-button.png" alt="">Register</div>
+                </a>
             </div>
           </div>
     </div>

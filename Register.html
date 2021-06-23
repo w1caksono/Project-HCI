@@ -7,28 +7,29 @@
     <title>Register Page</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/register.css">
+    <script type="text/javascript" src="js/register.js"></script>
 </head>
 
 <body>
 	<div class="navbar">
         <div class="dropdown">
-            <button class="dropbtn"><img src="assets/css/img/logo_righteous.png" alt=""></button>
+            <button class="dropbtn"><img src="assets/css/img/logo.png" alt=""></button>
             <div class="dropdown-content">
-              <a href="index.html">
+                <a href="Home.html">
                   <div class="dropdown-link"><img src="assets/css/img/home-button.png" alt="">Home</div>
                 </a>
-                <a href="characters.html">
+                <a href="Characters.html">
                     <div class="dropdown-link"><img src="assets/css/img/character-button.png" alt="">Characters</div>
-                  </a>
-              <a href="about.html">
+                </a>
+                <a href="About.html">
                     <div class="dropdown-link"><img src="assets/css/img/dev-note-button.png" alt="">About</div>
-              </a>
-              <a href="gallery.html">
-                <div class="dropdown-link"><img src="assets/css/img/folder-button.png" alt="">Gallery</div>
-              </a>
-              <a href="Register.html">
-                <div class="dropdown-link"><img src="assets/css/img/quill-button.png" alt="">Register</div>
-              </a>
+                </a>
+                <a href="Gallery.html">
+                    <div class="dropdown-link"><img src="assets/css/img/folder-button.png" alt="">Gallery</div>
+                </a>
+                <a href="Register.html">
+                    <div class="dropdown-link"><img src="assets/css/img/quill-button.png" alt="">Register</div>
+                </a>
             </div>
           </div>
     </div>
@@ -40,31 +41,31 @@
                     <div class="user-info">
                         <div class="input">
                             <span class="detail">Username</span>
-                            <input type="text" name="" placeholder="Enter your name" required>
+                            <input type="text" id="userName" placeholder="Enter your name" required>
                         </div>
 
                         <div class="input">
                             <span class="detail">Email</span>
-                            <input type="text" name="" placeholder="Enter your email" required>
+                            <input type="text" id="email" placeholder="Enter your email" required>
                         </div>
 
                         <div class="input">
                             <span class="detail">Password</span>
-                            <input type="password" name="" placeholder="Enter your password" required>
+                            <input type="password" id="password" placeholder="Enter your password" required>
                         </div>
 
                         <div class="input">
                             <span class="detail">Confirm Password</span>
-                            <input type="password" name="" placeholder="Re-enter your password" required>
+                            <input type="password" id="confPass" placeholder="Re-enter your password" required>
                         </div>
 
                         <div class="check">
-                            <input type="checkbox" name="">
+                            <input type="checkbox" id="check">
                             <span class="detail">I agree with terms and conditions</span>
                         </div>
                    </div>
                    <div class="button">
-                        <input type="submit">
+                        <input onclick="register()" type="submit" >
                     </div>
                 </form>
         </div>
